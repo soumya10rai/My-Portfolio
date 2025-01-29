@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumya Rai | Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fce4ec;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            perspective: 1000px; /* Subtle perspective for depth */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        header {
+            background-color: #d81b60;
+            padding: 30px;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            transform: rotateX(2deg); /* Subtle 3D rotation */
+            transition: transform 0.5s ease;
+        }
+        header:hover {
+            transform: rotateX(5deg); /* Slight increase on hover */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #c2185b;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 26px;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+        nav a:hover {
+            transform: translateY(-5px); /* Soft movement on hover */
+        }
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            border: 8px solid #d81b60;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05); /* Subtle scaling effect on hover */
+        }
+        .section {
+            padding: 60px 30px;
+            text-align: center;
+            background: white;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease;
+        }
+        .section:hover {
+            transform: scale(1.02); /* Soft scaling for depth */
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .section h2 {
+            color: #880e4f;
+            font-size: 40px;
+            font-weight: bold;
+            transform: translateZ(0); /* Subtle depth */
+            transition: transform 0.5s ease;
+        }
+        .section:hover h2 {
+            transform: translateZ(5px); /* Slight depth on hover */
+        }
+        .box {
+            background: #f8bbd0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .box:hover {
+            transform: translateY(-5px); /* Subtle movement on hover */
+        }
+        .footer {
+            background-color: #d81b60;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Soumya Rai | Portfolio
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#societies">Societies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section fade-in">
+            <h2>About Me</h2>
+            <img src="/College/myprofile.jpeg" alt="Soumya's Picture" class="profile-pic">
+            <div class="box">
+                <p><strong>Hello there!</strong> I'm <b>Soumya Rai</b>, a passionate and driven first-year <b>BTech CSE</b> student with a strong foundation in <b>web development</b> and <b>coding</b>, beginning in 8th grade. Skilled in <b>Python, HTML, CSS</b>, and experienced in creating engaging digital content using <b>Canva and Figma</b>. Known for <b>creativity, leadership, and collaboration</b>, currently an active member of the <b>MSC Media team</b>, <b>PR and Media Team Member of Aarohan IGDTUW</b>, and a mentee at <b>TechNeeds</b> and <b>LeanIn</b>. Recently participated in the <b>She On Chain Bootcamp</b> to enhance my skills in Web3 development.</p>
+            </div>
+        </section>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="box">
+                <p><b>10th:</b> Indirapuram Public School, Crossings Republik</p>
+                <p><b>12th:</b> The Vivekanand School</p>
+                <p><b>BTech CSE:</b> IGDTUW, 1st year (Interested in Web Development, C++, Solidity, and UI/UX)</p>
+            </div>
+        </section>
+        <section id="projects" class="section bounce">
+            <h2>Projects</h2>
+            <div class="box">
+                <p><b>Finexa:</b> The Finance App (Selected for 2nd round of IEEE WeEmpower Hackathon)</p>
+                <p><b>REplastify App:</b> Scans and tells if plastic is recycled (Won in HackThe Future Hackathon by GreenBits)</p>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="box">
+                <p><b>Email:</b> soumya207btcse24@igdtuw.ac.in</p>
+                <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/soumya-rai-73a022318/" target="_blank">Soumya Rai</a></p>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        &copy; 2025 Soumya Rai. All rights reserved.
+    </footer>
+</body>
+</html>
